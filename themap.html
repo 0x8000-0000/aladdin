@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Map</title>
+
+    <link rel="stylesheet" href="https://mapzen.com/js/mapzen.css"/>
+    <script src="https://mapzen.com/js/mapzen.min.js"></script>
+
+    <style>
+        #map {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        html,body{margin: 0; padding: 0;}
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <script>
+        // Add a Mapzen API key
+        L.Mapzen.apiKey = 'mapzen-eDR41VF';
+        // Add a map to the 'map' div
+        var map = L.Mapzen.map('map');
+        // Set the center of the map to be the UCF Area at zoom level 18
+        map.setView([28.600574,-81.197851], 18);
+    </script>
+
+</body>
+</html>
