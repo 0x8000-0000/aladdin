@@ -1,0 +1,11 @@
+Given:
+   S sunrail points
+   N bus routes containing K stops each
+   one origin point
+   one destination point
+
+Find route:
+   walk to bus
+   bus to sunrail
+   sunrail to bus
+   walk to destination
