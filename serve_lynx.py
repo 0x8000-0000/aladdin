@@ -20,7 +20,12 @@ def closestLynx():
    latitude = request.args.get('latitude', 0)
    longitude = request.args.get('longitude', 0)
    searchResult = kd.query([float(latitude), float(longitude)])
-   return (df.ix[searchResult[1]].to_json())
+   response = app.response_class(
+        response = df.ix[searchResult[1]].to_json(),
+        status = 200,
+        mimetype = 'application/json'
+   )
+   return response
 
 if __name__ == '__main__':
    app.run(debug = True)
